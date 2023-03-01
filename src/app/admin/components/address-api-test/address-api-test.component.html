@@ -1,0 +1,91 @@
+<form [formGroup]="form" (ngSubmit)="saveInfo()">
+    <!-- <button [disabled]="nameField.invalid" (click)="getNameValue()" > Get Value</button> -->
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Calle: {{ form.get('street').value }} {{
+                form.get('street').valid }}</mat-label>
+            <input matInput type="text" formControlName="street">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>No. Exterior: {{ form.get('exterior').value }} {{
+                form.get('exterior').valid }}</mat-label>
+            <input matInput type="text" formControlName="exterior">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>No. Interior: {{ form.get('interior').value }} {{
+                form.get('interior').valid }}</mat-label>
+            <input matInput type="text" formControlName="interior">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Colonia: {{ form.get('neighborhood').value }} {{
+                form.get('neighborhood').valid }}</mat-label>
+            <input matInput type="text" formControlName="neighborhood">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Ciudad: {{ form.get('city').value }} {{
+                form.get('city').valid }}</mat-label>
+            <input matInput type="text" formControlName="city">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Municipio: {{ form.get('municipality').value }} {{
+                form.get('municipality').valid }}</mat-label>
+            <input matInput type="text" formControlName="municipality">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Estado: {{ form.get('state').value }} {{
+                form.get('state').valid }}</mat-label>
+            <input [disabled]="true" matInput type="text" formControlName="state">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>País: {{ form.get('country').value }} {{
+                form.get('country').valid }}</mat-label>
+            <input [disabled]="true" matInput type="text" formControlName="country">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Código Postal: {{ form.get('zip').value }} {{
+                form.get('zip').valid }}</mat-label>
+            <input matInput type="text" formControlName="zip">
+        </mat-form-field>
+    </div>
+
+    <div formGroupName="streets">
+        <mat-form-field appearance="fill">
+            <mat-label>First Street: {{ form.get('streets.firstStreet').value }} {{
+                form.get('streets.firstStreet').valid }}</mat-label>
+            <input matInput type="text" formControlName="firstStreet">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Second Street: {{ form.get('streets.secondStreet').value }} {{
+                form.get('streets.secondStreet').valid }}</mat-label>
+            <input matInput type="text" formControlName="secondStreet">
+        </mat-form-field>
+    </div>
+
+    <button [disabled]="form.invalid" type="submit">Enviar</button>
+
+</form>

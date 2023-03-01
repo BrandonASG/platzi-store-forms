@@ -65,6 +65,7 @@ export class BasicFormComponent implements OnInit {
       zone: ['']
   });
 }
+
 //Funciones para obtener el valor de getName de forma sencilla
   getNameValue () {
     console.log(this.nameField.value);
@@ -78,10 +79,11 @@ export class BasicFormComponent implements OnInit {
     }
   }
 
+  //Manera abreviada de colocar una propiedad de un form group
   get nameField () {
       return this.form.get('fullName.name')
     }
-    
+  //Manera larga de extraer la propiedad de un form group
   get lastnameField () {
     return this.form.get('fullName').get('lastname');
   }

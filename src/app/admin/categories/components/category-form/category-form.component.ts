@@ -2,8 +2,9 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { Observable } from 'rxjs/operators';
+
+import { Observable } from 'rxjs';  
+import { finalize } from 'rxjs/operators';
 
 import { CategoriesService } from './../../../../core/services/categories.service';
 
@@ -66,6 +67,16 @@ export class CategoryFormComponent implements OnInit {
     const ref = this._storage.ref(name);
     const task = this._storage.upload(name, image);
 
-    task. 
+    task.snapshotChanges()
+    .pipe(
+      finalize(() => {
+        const urlImage$ = ref.getDownloadURL();
+        urlImage$.subscribe(url => {
+          console.log(url);
+          this.imageField.setValue(url);
+        })
+      })
+    )
+    .subscribe();
   }
 }

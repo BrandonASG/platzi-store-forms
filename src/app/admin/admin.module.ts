@@ -7,10 +7,11 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { MaterialModule } from './../material/material.module';
 import { NavComponent } from './components/nav/nav.component';
 import { BasicFormComponent } from './components/basic-form/basic-form.component';
+import { AddressApiTestComponent } from './components/address-api-test/address-api-test.component';
 
 
 @NgModule({
-  declarations: [ NavComponent, BasicFormComponent],
+  declarations: [ NavComponent, BasicFormComponent, AddressApiTestComponent ],
   imports: [
     CommonModule,
     AdminRoutingModule,

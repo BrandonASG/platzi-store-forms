@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { NavComponent } from './components/nav/nav.component';
 import { BasicFormComponent } from './components/basic-form/basic-form.component';
+import { AddressApiTestComponent } from './components/address-api-test/address-api-test.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,11 @@ const routes: Routes = [
       {
         path: 'basic',
         component: BasicFormComponent
+
+      },
+      {
+        path: 'address',
+        component: AddressApiTestComponent
 
       }
     ]
