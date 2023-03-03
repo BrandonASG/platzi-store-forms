@@ -6,7 +6,7 @@
             <input matInput type="text" formControlName="name">
             <mat-icon matSuffix *ngIf="isNameValid">done</mat-icon>
             <mat-icon matIconSuffix *ngIf="isNameInvalid">close</mat-icon>
-          </mat-form-field>
+        </mat-form-field>
 
         <div class="messages" [class.active]="nameField.touched && nameField.invalid">
             <mat-error *ngIf="nameField.hasError('required')">
@@ -21,19 +21,17 @@
         </div>
         <p>
             Last Name: {{ lastnameField.value }} {{ lastnameField.valid }}
-        
-            <input 
-            type="text" 
-            formControlName="lastname"/>
+
+            <input type="text" formControlName="lastname" />
             <!-- <code>
                 <pre>{{ nameField | json }}</pre>
-            </code> -->   
-        </p>       
+            </code> -->
+        </p>
     </div>
-    
+
     <p>
         Email: {{ emailField.value }}
-        <input type="email" formControlName="email" >
+        <input type="email" formControlName="email">
     </p>
     <div class="messages" [class.active]="emailField.touched && emailField.invalid">
         <P>
@@ -45,36 +43,36 @@
                 Este no es un email valido</strong>
         </P>
     </div>
-    
+
     <p>
         Phone: {{ phoneField.value }}
-        <input type="tel" formControlName="phone" > 
+        <input type="tel" formControlName="phone">
     </p>
     <div class="messages" [class.active]="phoneField.touched && phoneField.invalid">
         <P>
             <strong *ngIf="phoneField.touched && phoneField.hasError('required')">Este campo es requerido</strong>
         </P>
     </div>
-    
+
     <p>
         Color: {{ colorField.value }}
-        <input type="color" formControlName="color" > 
+        <input type="color" formControlName="color">
     </p>
-    
+
     <p>
         Date: {{ dateField.value }}
-        <input type="date" formControlName="date" > 
+        <input type="date" formControlName="date">
     </p>
-    
+
     <!-- <p>
         Age: {{ ageField.value }}
         <input type="date" formControlName="age" > 
     </p> -->
-    
-    
+
+
     <p>
         Age(Number): {{ ageField.value }}
-        <input type="number" formControlName="age" > 
+        <input type="number" formControlName="age">
     </p>
     <div class="messages" [class.active]="ageField.touched && ageField.invalid">
         <P>
@@ -87,7 +85,7 @@
             <strong *ngIf="ageField.hasError('max')">Debe tener una edad válida</strong>
         </P>
     </div>
-    
+
     <p>
         Categories: {{ categoryField.value }}
         <select formControlName="category">
@@ -97,7 +95,7 @@
             <option value="ID_de_categoria_4">Category 4</option>
         </select>
     </p>
-    
+
     <p>
         Tags: {{ tagField.value }}
         <select formControlName="tag" multiple>
@@ -107,40 +105,40 @@
             <option value="ID_de_tag_4">Tag 4</option>
         </select>
     </p>
-    
+
     <p>
         Agree: {{ agreeField.value }}
-        <input type="checkbox" formControlName="agree" > 
+        <input type="checkbox" formControlName="agree">
     </p>
-    
+
     <p>
         Gender: {{ genderField.value }}
         <label>
-            <input name="gender" type="radio" value="male" formControlName="gender"/>
+            <input name="gender" type="radio" value="male" formControlName="gender" />
             Male
         </label>
         <label>
-            <input name="gender" type="radio" value="female" formControlName="gender"/> 
+            <input name="gender" type="radio" value="female" formControlName="gender" />
             Female
         </label>
         <label>
-            <input name="gender" type="radio" value="other" formControlName="gender"/>
+            <input name="gender" type="radio" value="other" formControlName="gender" />
             Other
         </label>
     </p>
-    
+
     <p>
         Zone: {{ zoneField.value }}
         <label>
-            <input name="zone" type="radio" value="zone-1" formControlName="zone"/>
+            <input name="zone" type="radio" value="zone-1" formControlName="zone" />
             Zone 1
         </label>
         <label>
-            <input name="zone" type="radio" value="zone-2" formControlName="zone"/> 
+            <input name="zone" type="radio" value="zone-2" formControlName="zone" />
             Zone 2
         </label>
         <label>
-            <input name="zone" type="radio" value="zone-3" formControlName="zone"/>
+            <input name="zone" type="radio" value="zone-3" formControlName="zone" />
             Zone 3
         </label>
     </p>

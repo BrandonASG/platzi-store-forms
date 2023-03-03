@@ -3,7 +3,7 @@
     <div>
         <mat-form-field appearance="fill">
             <mat-label>Calle: {{ form.get('street').value }} {{
-                form.get('street').valid }}</mat-label>
+                form.get('street').valid }} (disabled)</mat-label>
             <input matInput type="text" formControlName="street">
         </mat-form-field>
     </div>
@@ -36,7 +36,8 @@
         <mat-form-field appearance="fill">
             <mat-label>Ciudad: {{ form.get('city').value }} {{
                 form.get('city').valid }}</mat-label>
-            <input matInput type="text" formControlName="city">
+                <input matInput disabled type="text">
+            <!-- <input matInput type="text" formControlName="city"> -->
         </mat-form-field>
     </div>
 
@@ -44,7 +45,8 @@
         <mat-form-field appearance="fill">
             <mat-label>Municipio: {{ form.get('municipality').value }} {{
                 form.get('municipality').valid }}</mat-label>
-            <input matInput type="text" formControlName="municipality">
+                <input matInput disabled type="text">
+            <!-- <input matInput type="text" formControlName="municipality"> -->
         </mat-form-field>
     </div>
 
@@ -52,7 +54,8 @@
         <mat-form-field appearance="fill">
             <mat-label>Estado: {{ form.get('state').value }} {{
                 form.get('state').valid }}</mat-label>
-            <input [disabled]="true" matInput type="text" formControlName="state">
+                <input matInput disabled type="text">
+            <!-- <input [disabled]="true" matInput type="text" formControlName="state"> -->
         </mat-form-field>
     </div>
 
@@ -60,7 +63,8 @@
         <mat-form-field appearance="fill">
             <mat-label>País: {{ form.get('country').value }} {{
                 form.get('country').valid }}</mat-label>
-            <input [disabled]="true" matInput type="text" formControlName="country">
+                <input matInput disabled type="text">
+            <!-- <input [disabled]="true" matInput type="text" formControlName="country"> -->
         </mat-form-field>
     </div>
 
@@ -68,6 +72,7 @@
         <mat-form-field appearance="fill">
             <mat-label>Código Postal: {{ form.get('zip').value }} {{
                 form.get('zip').valid }}</mat-label>
+            <!-- <input matInput disabled type="text"> -->
             <input matInput type="text" formControlName="zip">
         </mat-form-field>
     </div>
@@ -86,6 +91,8 @@
         </mat-form-field>
     </div>
 
-    <button [disabled]="form.invalid" type="submit">Enviar</button>
+    <button type="submit">Enviar</button>
+
+    <!-- <button [disabled]="form.invalid" type="submit">Enviar</button> -->
 
 </form>
